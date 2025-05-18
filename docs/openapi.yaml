@@ -1,0 +1,22 @@
+openapi: 3.0.0
+info:
+  title: BlazePHP API
+  version: 1.0.0
+paths:
+  /api/login:
+    post:
+      summary: Login
+      responses:
+        '200':
+          description: Token returned
+  /api/profile:
+    get:
+      summary: Get user profile
+      security:
+        - bearerAuth: []
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

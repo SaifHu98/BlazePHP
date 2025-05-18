@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BlazePHP - Modern Secure PHP Framework</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-900 font-sans">
+  <div class="max-w-5xl mx-auto px-6 py-10">
+    <div class="flex items-center space-x-6 mb-8">
+      <img src="logo.png" alt="BlazePHP Logo" class="w-16 h-16"/>
+      <h1 class="text-3xl font-bold">BlazePHP</h1>
+    </div>
+    <p class="mb-6">BlazePHP is a blazing-fast, multilingual, ultra-secure PHP framework designed for modern APIs and full-stack development.</p>
+
+    <h2 class="text-xl font-semibold mt-8 mb-2">Key Features</h2>
+    <ul class="list-disc pl-6 space-y-1">
+      <li>RESTful API with JWT authentication</li>
+      <li>RBAC (role-based access control)</li>
+      <li>Plugin system and Live Code Playground</li>
+      <li>AI Developer Assistant</li>
+      <li>Multilingual support with auto-language resolution</li>
+      <li>Vue Admin panel</li>
+      <li>Secure Middleware: CSRF, XSS, RateLimiter, Firewall</li>
+      <li>Docker + CI/CD + PHPUnit</li>
+    </ul>
+
+    <h2 class="text-xl font-semibold mt-8 mb-2">Quick Setup</h2>
+    <pre class="bg-gray-100 p-4 rounded"><code>composer install
+cp config/env.example.php config/env.php
+sh install/setup.sh
+mysql -u root -p blazephp &lt; install/setup.sql
+php -S localhost:8000 -t public</code></pre>
+
+    <h2 class="text-xl font-semibold mt-8 mb-2">Vue Admin</h2>
+    <pre class="bg-gray-100 p-4 rounded"><code>cd frontend/vue-admin
+npm install
+npm run serve</code></pre>
+
+    <h2 class="text-xl font-semibold mt-8 mb-2">Docker</h2>
+    <pre class="bg-gray-100 p-4 rounded"><code>docker-compose up -d --build</code></pre>
+
+    <h2 class="text-xl font-semibold mt-8 mb-2">Testing</h2>
+    <pre class="bg-gray-100 p-4 rounded"><code>vendor/bin/phpunit</code></pre>
+
+    <h2 class="text-xl font-semibold mt-8 mb-2">Contribute</h2>
+    <p>Fork the project, build new plugins or features, add translations, and submit pull requests on GitHub.</p>
+
+    <footer class="mt-12 text-sm text-gray-500 text-center">
+      &copy; 2025 BlazePHP – Open Source and Community Driven.
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+# BlazePHP Git Ignore File
+
+# Composer dependencies
+/vendor/
+/composer.lock
+
+# Node modules
+/frontend/vue-admin/node_modules/
+/frontend/vue-admin/dist/
+/frontend/vue-admin/.vite/
+
+# Environment
+.env
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db

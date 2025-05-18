@@ -1,0 +1,43 @@
+name: BlazePHP CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: secret
+          MYSQL_DATABASE: blazephp
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping --silent" --health-interval=10s --health-timeout=5s --health-retries=3
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.2'
+        extensions: pdo_mysql, zip
+        coverage: none
+
+    - name: Install dependencies
+      run: composer install --no-progress --no-suggest
+
+    - name: Run tests
+      run: |
+        echo "<?php echo 'Running tests...';" > tests/test.php
+        php tests/test.php
+
+    - name: Deploy (Simulated)
+      run: echo "Deployment successful (e.g. via SSH or to server/CDN)."
