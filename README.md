@@ -1,4 +1,4 @@
-# 🚀 BlazePHP Framework
+[[# 🚀 BlazePHP Framework
 
 **BlazePHP** is a modern, lightweight, and high-performance PHP framework.  
 It supports Vue.js for the frontend, making it ideal for building efficient web applications with complete user and permission management, including JWT-based authentication.
